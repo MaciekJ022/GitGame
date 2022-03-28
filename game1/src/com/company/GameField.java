@@ -52,7 +52,10 @@ public class GameField extends JPanel {
                 }
                 if (key == player.leftAttackKey) {
                     player.leftAttack();
-                    //player.setAttackLeftImage();
+                    player.setAttackLeftImage();
+                    if (player.getX() >= 40 && CharacterClass.occupiedCells[player.getX() - 40][player.getY()]){
+
+                    }
 
                     //timer
                     new java.util.Timer().schedule(
@@ -67,7 +70,7 @@ public class GameField extends JPanel {
                 }
                 if (key == player.rightAttackKey) {
                     player.rightAttack();
-                    //player.setAttackRightImage();
+                    player.setAttackRightImage();
 
                     //timer
                     new java.util.Timer().schedule(
